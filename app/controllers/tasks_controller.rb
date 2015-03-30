@@ -9,7 +9,7 @@ class TasksController < ActionController::Base
     @task = Task.new(task_params)
 
     if @task.save
-      render json: @task
+      render json: @task, status: 201
     end
   end
 
