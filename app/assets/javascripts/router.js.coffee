@@ -8,5 +8,5 @@ Todo.TasksRoute = Ember.Route.extend({
     controller.set('model', model);
 
   model: () ->
-    return this.store.find('task');
+    return @.store.find('task')
 });
