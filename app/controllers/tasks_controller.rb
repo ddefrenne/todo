@@ -10,6 +10,8 @@ class TasksController < ActionController::Base
 
     if @task.save
       render json: @task, status: 201
+    else
+      render json: { errors: @task.errors }, status: 422
     end
   end
 
