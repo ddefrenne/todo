@@ -1,14 +1,13 @@
 Todo.TasksController = Ember.ArrayController.extend({
   actions: {
     createTask: () ->
-      description = @.get('newDescription');
+      description = @get('newDescription')
 
-      task = @.store.createRecord('task', {
+      task = @store.createRecord('task', {
         description: description
-      });
-
-      @.set('newDescription', '')
+      })
 
       task.save()
+      @set('newDescription', '')
   }
 })
