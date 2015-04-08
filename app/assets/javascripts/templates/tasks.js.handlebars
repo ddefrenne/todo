@@ -1,8 +1,8 @@
-<ol id="tasks-list">
+<ul id="tasks-list">
     {{#each task in model}}
         <li>{{task.description}}</li>
     {{/each}}
-</ol>
+</ul>
 
 {{input type='text' id='new-task'
         value=newDescription action='createTask'}}
