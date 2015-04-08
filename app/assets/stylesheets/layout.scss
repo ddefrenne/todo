@@ -13,3 +13,12 @@ main {
   top: 70px;
   padding-top: 20px;
 }
+
+ul li {
+  list-style: none;
+  line-height: 2em;
+
+  &:nth-child(odd) {
+    background-color: #CFFDEC;
+  }
+}
