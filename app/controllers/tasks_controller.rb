@@ -15,6 +15,13 @@ class TasksController < ActionController::Base
     end
   end
 
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+
+    render json: {}, status: 200
+  end
+
   private
 
     def task_params
