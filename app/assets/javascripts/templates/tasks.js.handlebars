@@ -1,6 +1,9 @@
 <ul id="tasks-list" class="list-group">
     {{#each task in model}}
-        <li class="list-group-item">{{task.description}}</li>
+        <li class="list-group-item">
+          <button class="btn btn-danger" type="button">✘</button>
+          <span>{{task.description}}</span>
+        </li>
     {{/each}}
 </ul>
 

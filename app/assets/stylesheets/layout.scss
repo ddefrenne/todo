@@ -30,3 +30,12 @@ ul li {
     background-color: $lightblue;
   }
 }
+
+li {
+  button{
+    margin-left: -5px;
+  }
+  span {
+    margin-left: 5px;
+  }
+}
