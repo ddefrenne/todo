@@ -1,3 +1,9 @@
+$lightblue: #BBD8F2;
+$darkblue: #8FA4BF;
+$lightbrown: #D9C0A3;
+$middlebrown: #BFA58E;
+$darkbrown: #594539;
+
 header {
   position: absolute;
   top: 0;
@@ -6,6 +12,8 @@ header {
   height: 70px;
   border-bottom: 1px solid black;
   padding-left: 20px;
+  color: $middlebrown;
+  background-color: $darkbrown;
 }
 
 main {
@@ -19,6 +27,6 @@ ul li {
   line-height: 2em;
 
   &:nth-child(odd) {
-    background-color: #CFFDEC;
+    background-color: $lightblue;
   }
 }
