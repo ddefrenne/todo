@@ -1,6 +1,6 @@
 Todo.TaskController = Ember.ObjectController.extend({
   actions: {
-    removeTodo: () ->
+    removeTask: () ->
       todo = @get('model')
       todo.deleteRecord()
       todo.save()
