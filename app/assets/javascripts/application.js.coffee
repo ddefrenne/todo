@@ -11,3 +11,10 @@ window.Todo = Ember.Application.create({
   LOG_TRANSITIONS: true
 })
 
+$('body').on('mouseenter', '#tasks-list li', (event) ->
+  $(event.target).find('#delete-task').show()
+)
+
+$('body').on('mouseleave', '#tasks-list li', (event) ->
+  $(event.target).find('#delete-task').hide()
+)
