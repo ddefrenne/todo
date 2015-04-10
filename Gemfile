@@ -35,3 +35,4 @@ group :development do
 end
 
 gem "ember-rails", "~> 0.15"
+gem "bootstrap-sass"
