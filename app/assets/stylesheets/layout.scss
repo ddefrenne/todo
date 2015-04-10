@@ -32,8 +32,12 @@ ul li {
 }
 
 li {
-  button{
+  button {
     margin-left: -5px;
+
+    &#delete-task {
+      display: none;
+    }
   }
   span {
     margin-left: 5px;
