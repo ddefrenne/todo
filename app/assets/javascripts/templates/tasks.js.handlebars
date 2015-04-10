@@ -4,7 +4,9 @@
           <button class="btn btn-danger btn-xs"
                   type="button"
                   id="delete-task"
-                  {{action "removeTodo"}}>✘</button>
+                  {{action "removeTodo"}}>
+                  <i class="fa fa-trash-o fa-lg"></i>
+          </button>
           <span>{{task.description}}</span>
         </li>
     {{/each}}
