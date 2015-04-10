@@ -32,13 +32,19 @@ ul li {
 }
 
 li {
-  button {
+  .task-actions {
+    display: inline;
     margin-left: -5px;
 
-    &#delete-task {
+    button + button {
+      margin-left: 5px;
+    }
+
+    #delete-task, #complete-task {
       display: none;
     }
   }
+
   span {
     margin-left: 5px;
   }
