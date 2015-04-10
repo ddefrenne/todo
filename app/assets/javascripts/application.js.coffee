@@ -12,9 +12,9 @@ window.Todo = Ember.Application.create({
 })
 
 $('body').on('mouseenter', '#tasks-list li', (event) ->
-  $(event.target).find('#delete-task').show()
+  $(event.target).find('button').show()
 )
 
 $('body').on('mouseleave', '#tasks-list li', (event) ->
-  $(event.target).find('#delete-task').hide()
+  $(event.target).find('button').hide()
 )

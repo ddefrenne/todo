@@ -15,6 +15,16 @@ class TasksController < ActionController::Base
     end
   end
 
+  def update
+    @task = Task.find(params[:id])
+
+    if @task.update(task_params)
+      render json: @task, status: 200
+    else
+      render json: @task.errors, status: 422
+    end
+  end
+
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
@@ -25,7 +35,7 @@ class TasksController < ActionController::Base
   private
 
     def task_params
-      params.require(:task).permit(:description)
+      params.require(:task).permit(:description, :completed)
     end
 
 end
