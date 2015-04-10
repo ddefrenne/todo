@@ -30,3 +30,16 @@ ul li {
     background-color: $lightblue;
   }
 }
+
+li {
+  button {
+    margin-left: -5px;
+
+    &#delete-task {
+      display: none;
+    }
+  }
+  span {
+    margin-left: 5px;
+  }
+}
