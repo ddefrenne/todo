@@ -36,3 +36,4 @@ end
 
 gem "ember-rails", "~> 0.15"
 gem "bootstrap-sass"
+gem "font-awesome-sass", "~> 4.3.2"
