@@ -66,6 +66,8 @@ GEM
     ember-source (1.10.0)
     erubis (2.7.0)
     execjs (2.4.0)
+    font-awesome-sass (4.3.2.1)
+      sass (~> 3.2)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -163,6 +165,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   ember-rails (~> 0.15)
+  font-awesome-sass (~> 4.3.2)
   jbuilder (~> 2.0)
   jquery-rails
   pry-rails
