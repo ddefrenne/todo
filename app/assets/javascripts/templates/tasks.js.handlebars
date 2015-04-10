@@ -1,7 +1,10 @@
 <ul id="tasks-list" class="list-group">
-    {{#each task in model}}
+    {{#each task in model itemController='task'}}
         <li class="list-group-item">
-          <button class="btn btn-danger btn-xs" type="button" id="delete-task">✘</button>
+          <button class="btn btn-danger btn-xs"
+                  type="button"
+                  id="delete-task"
+                  {{action "removeTodo"}}>✘</button>
           <span>{{task.description}}</span>
         </li>
     {{/each}}
