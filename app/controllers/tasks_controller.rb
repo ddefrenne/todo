@@ -1,7 +1,12 @@
 class TasksController < ActionController::Base
 
   def index
-    @tasks = Task.all
+    if params
+      @tasks = filter_tasks_by_params
+    else
+      @tasks = Task.all
+    end
+
     render json: @tasks
   end
 
@@ -36,6 +41,23 @@ class TasksController < ActionController::Base
 
     def task_params
       params.require(:task).permit(:description, :completed)
+    end
+
+    def filter_tasks_by_params
+      keys, values = [], []
+      sanitized_params = params.extract!(:description, :completed)
+
+      sanitized_params.each do |param|
+        keys << param[0]
+        if ['true', 'false'].include?(param[1])
+          param[1] = param[1] == 'true' ? true : false
+        end
+        values << param[1]
+      end
+
+      query = keys.inject([]) { |query_by, key| query_by << "#{key} = ?" }.join(" AND ")
+
+      Task.where(query, *values)
     end
 
 end
