@@ -48,4 +48,10 @@ li {
   span {
     margin-left: 5px;
   }
+
+  &.completed {
+    span {
+      text-decoration: line-through;
+    }
+  }
 }
