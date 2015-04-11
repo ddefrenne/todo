@@ -2,37 +2,37 @@ class TasksController < ActionController::Base
 
   def index
     if params
-      @tasks = filter_tasks_by_params
+      tasks = filter_tasks_by_params
     else
-      @tasks = Task.all
+      tasks = Task.all
     end
 
-    render json: @tasks
+    render json: tasks
   end
 
   def create
-    @task = Task.new(task_params)
+    task = Task.new(task_params)
 
-    if @task.save
-      render json: @task, status: 201
+    if task.save
+      render json: task, status: 201
     else
-      render json: { errors: @task.errors }, status: 422
+      render json: { errors: task.errors }, status: 422
     end
   end
 
   def update
-    @task = Task.find(params[:id])
+    task = Task.find(params[:id])
 
-    if @task.update(task_params)
-      render json: @task, status: 200
+    if task.update(task_params)
+      render json: task, status: 200
     else
-      render json: @task.errors, status: 422
+      render json: task.errors, status: 422
     end
   end
 
   def destroy
-    @task = Task.find(params[:id])
-    @task.destroy
+    Task.find(params[:id])
+      .destroy
 
     render json: {}, status: 204
   end
