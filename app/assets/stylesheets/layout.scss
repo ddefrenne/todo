@@ -10,6 +10,14 @@ header {
   padding-left: 20px;
   color: white;
   background-color: $darkbrown;
+
+  .root-link {
+    &:active, &:hover, &:visited, &.active {
+      text-decoration: none;
+      cursor: pointer;
+      color: white;
+    }
+  }
 }
 
 aside {
