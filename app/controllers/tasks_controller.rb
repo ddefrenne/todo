@@ -34,7 +34,7 @@ class TasksController < ActionController::Base
     @task = Task.find(params[:id])
     @task.destroy
 
-    render json: {}, status: 200
+    render json: {}, status: 204
   end
 
   private
