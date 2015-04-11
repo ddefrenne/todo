@@ -6,7 +6,7 @@ Todo.Router.map ()->
 
 Todo.TasksRoute = Ember.Route.extend({
   model: ->
-    return @store.find('task', { completed: false })
+    return @store.find('task')
 })
 
 Todo.ProjectsIndexRoute = Ember.Route.extend({
