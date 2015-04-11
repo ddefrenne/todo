@@ -55,7 +55,8 @@ class TasksController < ActionController::Base
         values << param[1]
       end
 
-      query = keys.inject([]) { |query_by, key| query_by << "#{key} = ?" }.join(" AND ")
+      query = keys.inject([]) { |query_by, key| query_by << "#{key} = ?" }
+        .join(" AND ")
 
       Task.where(query, *values)
     end
