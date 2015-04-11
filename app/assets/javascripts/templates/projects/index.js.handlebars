@@ -1,0 +1,5 @@
+<ul id="projects-list" class="list-group">
+  {{#each project in model}}
+    {{#link-to "projects.show" project}}<li class="list-group-item">{{project.name}}</li>{{/link-to}}
+  {{/each}}
+</ul>

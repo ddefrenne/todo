@@ -1,13 +1,20 @@
 Todo.Router.map ()->
   @resource('tasks', { path: '/' } )
-  @resource('projects', { path: '/projects' } )
+  @resource('projects', ->
+    @route('show', { path: '/:project_id' })
+  )
 
 Todo.TasksRoute = Ember.Route.extend({
   model: ->
     return @store.find('task', { completed: false })
 })
 
-Todo.ProjectsRoute = Ember.Route.extend({
+Todo.ProjectsIndexRoute = Ember.Route.extend({
   model: ->
     return @store.find('project')
+})
+
+Todo.ProjectsShowRoute = Ember.Route.extend({
+  model: (params) ->
+    return @store.find('project', params.project_id)
 })
