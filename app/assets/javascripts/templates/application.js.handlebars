@@ -1,7 +1,17 @@
-<header>
-    <h1>Todo</h1>
-</header>
-
 <main class="container-fluid">
-    {{outlet 'main'}}
+  <div class="row">
+    <header class="col-md-12">
+      <h1>Todo</h1>
+    </header>
+  </div>
+
+  <div id="main-row" class="row">
+    <aside class="col-md-2">
+      {{outlet 'sidebar'}}
+    </aside>
+
+    <div id="main-outlet" class="col-md-10">
+      {{outlet 'main'}}
+    </div>
+  </div>
 </main>
