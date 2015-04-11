@@ -4,18 +4,42 @@ $lightbrown: #D9C0A3;
 $middlebrown: #BFA58E;
 $darkbrown: #594539;
 
+html {
+  font-size: 62.5%;
+}
+
 header {
   height: 70px;
   border-bottom: 1px solid black;
   padding-left: 20px;
-  color: $middlebrown;
-  background-color: $darkbrown;
+  color: white;
+  background-color: $darkblue;
+
+  .root-link {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    font-size: 4rem;
+
+    &:active, &:hover, &:visited, &.active {
+      text-decoration: none;
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  #nav {
+    display: inline;
+    position: relative;
+    top: 2px;
+    margin-left: 60px;
+  }
 }
 
 aside {
   padding-top: 20px;
   height: 100%;
-  background-color: $lightbrown;
+  background-color: $darkbrown;
   width: 100px;
 }
 
