@@ -1,7 +1,7 @@
 <ul id="tasks-list" class="list-group">
     {{#each task in model itemController='task'}}
     <li {{ bind-attr class=":list-group-item task.isCompleted:completed" }}>
-          <div class="task-actions">
+          <div class="task-actions hide-with-room">
             <button class="btn btn-danger btn-xs"
                     type="button"
                     id="delete-task"

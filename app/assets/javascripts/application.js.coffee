@@ -12,9 +12,13 @@ window.Todo = Ember.Application.create({
 })
 
 $('body').on('mouseenter', '#tasks-list li', (event) ->
-  $(event.target).find('button').show()
+  $(event.target).find('.task-actions')
+    .removeClass("hide-with-room")
+    .addClass("show-with-room")
 )
 
 $('body').on('mouseleave', '#tasks-list li', (event) ->
-  $(event.target).find('button').hide()
+  $(event.target).find('.task-actions')
+    .removeClass("show-with-room")
+    .addClass("hide-with-room")
 )

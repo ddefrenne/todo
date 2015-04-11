@@ -31,6 +31,13 @@ ul li {
   }
 }
 
+.hide-with-room {
+  visibility: hidden;
+}
+.show-with-room {
+  visibility: visible;
+}
+
 li {
   .task-actions {
     display: inline;
@@ -38,10 +45,6 @@ li {
 
     button + button {
       margin-left: 5px;
-    }
-
-    #delete-task, #complete-task {
-      display: none;
     }
   }
 
