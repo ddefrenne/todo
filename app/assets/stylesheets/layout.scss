@@ -9,7 +9,7 @@ header {
   border-bottom: 1px solid black;
   padding-left: 20px;
   color: white;
-  background-color: $darkbrown;
+  background-color: $darkblue;
 
   .root-link {
     &:active, &:hover, &:visited, &.active {
@@ -23,7 +23,7 @@ header {
 aside {
   padding-top: 20px;
   height: 100%;
-  background-color: $lightbrown;
+  background-color: $darkbrown;
   width: 100px;
 }
 
