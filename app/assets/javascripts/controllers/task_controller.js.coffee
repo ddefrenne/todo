@@ -12,6 +12,6 @@ Todo.TaskController = Ember.ObjectController.extend({
   },
 
   isCompleted: (->
-    return @get('model').get('completed')
+    return @get('model.completed')
   ).property('model.completed')
 })

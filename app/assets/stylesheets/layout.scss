@@ -37,6 +37,12 @@ aside {
     &:nth-child(odd) {
       background-color: $lightblue;
     }
+
+    &.completed {
+      span {
+        text-decoration: line-through;
+      }
+    }
   }
 
   .task-description {
@@ -49,12 +55,6 @@ aside {
 
     button + button {
       margin-left: 5px;
-    }
-  }
-
-  &.completed {
-    span {
-      text-decoration: line-through;
     }
   }
 }
