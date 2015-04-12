@@ -1,7 +1,12 @@
 <ul id="tasks-list" class="list-group">
-    {{#each task in model itemController='task'}}
-      <li {{ bind-attr class=":list-group-item task.isCompleted:completed" }}>
-          <div class="task-actions hide-with-room">
+  {{#each task in model itemController='task'}}
+    <li {{ bind-attr class=":list-group-item task.isCompleted:completed" }}>
+      <div class="row">
+        <div class="task-description col-md-10 col-sm-10 col-xs-10">
+          {{task.description}}
+        </div>
+        <div class="task-actions col-md-2 col-sm-2 col-xs-2">
+          <div class="pull-right">
             <button class="btn btn-danger btn-xs"
                     type="button"
                     id="delete-task"
@@ -15,10 +20,12 @@
                     <i class="fa fa-check fa-xs"></i>
             </button>
           </div>
-          <span>{{task.description}}</span>
-        </li>
-    {{/each}}
+        </div>
+      </div>
+    </li>
+  {{/each}}
 </ul>
 
-{{input type='text' id='new-task'
+<label>New task</label>
+{{input type='text' id='new-task' class='form-control'
         value=newDescription action='createTask'}}
