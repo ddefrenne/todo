@@ -29,6 +29,29 @@ aside {
   background-color: $darkbrown;
 }
 
+.panel-body {
+  padding: 0;
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  li {
+    border-left: 0px;
+    border-right: 0px;
+
+    &:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
 #tasks-list {
   li {
     list-style: none;
