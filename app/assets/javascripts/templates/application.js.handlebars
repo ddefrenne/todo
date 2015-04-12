@@ -1,6 +1,6 @@
 <main class="container-fluid">
   <div class="row">
-    <header class="col-md-12">
+    <header class="col-md-12 col-sm-12 col-xs-12">
       {{#link-to "application" class="root-link"}}Todo{{/link-to}}
       <div id="nav">
         {{#link-to "projects" class="btn btn-default navbar-btn"}}Projects{{/link-to}}
@@ -9,11 +9,11 @@
   </div>
 
   <div id="main-row" class="row">
-    <aside class="col-md-2">
+    <aside class="col-md-2 col-sm-2">
       {{outlet 'sidebar'}}
     </aside>
 
-    <div id="main-outlet" class="col-md-10">
+    <div id="main-outlet" class="col-md-10 col-sm-10">
       {{outlet 'main'}}
     </div>
   </div>
