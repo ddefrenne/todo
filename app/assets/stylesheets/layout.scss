@@ -12,31 +12,13 @@ h2 {
   border-bottom: 1px solid #000;
 }
 
-header {
-  height: 70px;
-  border-bottom: 1px solid black;
-  padding-left: 20px;
-  color: white;
-  background-color: $darkblue;
-
-  .root-link {
-    position: relative;
-    top: 10px;
-    left: 20px;
-    font-size: 4rem;
-
-    &:active, &:hover, &:visited, &.active {
-      text-decoration: none;
-      cursor: pointer;
-      color: white;
-    }
+nav {
+  .navbar-brand {
+    font-size: 3rem;
   }
 
-  #nav {
-    display: inline;
-    position: relative;
-    top: 2px;
-    margin-left: 60px;
+  li {
+    list-style: none;
   }
 }
 
@@ -45,12 +27,6 @@ aside {
   padding-top: 20px;
   height: 100%;
   background-color: $darkbrown;
-}
-
-main {
-  #main-outlet {
-    padding-top: 20px;
-  }
 }
 
 #tasks-list {
