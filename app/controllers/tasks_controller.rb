@@ -1,11 +1,7 @@
 class TasksController < ActionController::Base
 
   def index
-    if params
-      tasks = filter_tasks_by_params
-    else
-      tasks = Task.all
-    end
+    tasks = params.present? ? filter_tasks_by_params : Task.all
 
     render json: tasks
   end
