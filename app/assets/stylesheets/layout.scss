@@ -3,6 +3,7 @@ $darkblue: #8FA4BF;
 $lightbrown: #D9C0A3;
 $middlebrown: #BFA58E;
 $darkbrown: #594539;
+$text-darkblue: #476488;
 
 html {
   font-size: 62.5%;
@@ -81,7 +82,13 @@ aside {
 #tasks-list {
   li {
     list-style: none;
-    line-height: 2em;
+    line-height: 1.8em;
+    color: $text-darkblue;
+
+    &.list-group-item {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
 
     &:nth-child(odd) {
       background-color: $lightblue;
