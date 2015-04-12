@@ -8,6 +8,10 @@ html {
   font-size: 62.5%;
 }
 
+h2 {
+  border-bottom: 1px solid #000;
+}
+
 header {
   height: 70px;
   border-bottom: 1px solid black;
@@ -49,23 +53,20 @@ main {
   }
 }
 
-ul li {
-  list-style: none;
-  line-height: 2em;
+#tasks-list {
+  li {
+    list-style: none;
+    line-height: 2em;
 
-  &:nth-child(odd) {
-    background-color: $lightblue;
+    &:nth-child(odd) {
+      background-color: $lightblue;
+    }
   }
-}
 
-.hide-with-room {
-  visibility: hidden;
-}
-.show-with-room {
-  visibility: visible;
-}
+  .task-description {
+    overflow: auto;
+  }
 
-li {
   .task-actions {
     display: inline;
     margin-left: -5px;
@@ -75,17 +76,9 @@ li {
     }
   }
 
-  span {
-    margin-left: 5px;
-  }
-
   &.completed {
     span {
       text-decoration: line-through;
     }
   }
-}
-
-h2 {
-  border-bottom: 1px solid #000;
 }
