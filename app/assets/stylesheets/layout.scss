@@ -14,23 +14,37 @@ h1, h2, h3, h4 {
 }
 
 nav {
+  &.navbar-default {
+    background-color: $darkblue;
+
+    .navbar-brand {
+      font-size: 3rem;
+      line-height: normal;
+      margin-right: 15px;
+
+      &:active, &:visited, &:hover {
+        color: white;
+      }
+    }
+
+    .navbar-nav li {
+      a:active, a:visited, a:hover {
+        background-color: white;
+      }
+
+      list-style: none;
+
+      .navbar-btn {
+        font-size: 1.6rem;
+        padding: 10px;
+      }
+    }
+  }
+
   &.navbar {
     margin-bottom: 20px;
-  }
-
-  .navbar-brand {
-    font-size: 3rem;
-    line-height: normal;
-    margin-right: 15px;
-  }
-
-  li {
-    list-style: none;
-
-    .navbar-btn {
-      font-size: 1.6rem;
-      padding: 10px;
-    }
+    border-radius: 0;
+    border: 0px;
   }
 }
 
