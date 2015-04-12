@@ -1,31 +1,39 @@
-<ul id="tasks-list" class="list-group">
-  {{#each task in model itemController='task'}}
-    <li {{ bind-attr class=":list-group-item task.isCompleted:completed" }}>
-      <div class="row">
-        <div class="task-description col-md-10 col-sm-10 col-xs-10">
-          <span>{{task.description}}</span>
-        </div>
-        <div class="task-actions col-md-2 col-sm-2 col-xs-2">
-          <div class="pull-right">
-            <button class="btn btn-danger btn-xs"
-                    type="button"
-                    id="delete-task"
-                    {{action "removeTask"}}>
-                    <i class="fa fa-trash-o fa-lg"></i>
-            </button>
-            <button class="btn btn-success btn-xs"
-                    type="button"
-                    id="complete-task"
-                    {{action "completeTask"}}>
-                    <i class="fa fa-check fa-xs"></i>
-            </button>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <span id="tasks-remaining">{{remaining}} tasks remaining.</span>
+  </div>
+  <div class="panel-body">
+    <ul id="tasks-list" class="list-group">
+      {{#each task in model itemController='task'}}
+        <li {{ bind-attr class=":list-group-item task.isCompleted:completed" }}>
+          <div class="row">
+            <div class="task-description col-md-10 col-sm-10 col-xs-10">
+              <span>{{task.description}}</span>
+            </div>
+            <div class="task-actions col-md-2 col-sm-2 col-xs-2">
+              <div class="pull-right">
+                <button class="btn btn-danger btn-xs"
+                        type="button"
+                        id="delete-task"
+                        {{action "removeTask"}}>
+                        <i class="fa fa-trash-o fa-lg"></i>
+                </button>
+                <button class="btn btn-success btn-xs"
+                        type="button"
+                        id="complete-task"
+                        {{action "completeTask"}}>
+                        <i class="fa fa-check fa-xs"></i>
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </li>
-  {{/each}}
-</ul>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
 
 <label>New task</label>
 {{input type='text' id='new-task' class='form-control'
         value=newDescription action='createTask'}}
+

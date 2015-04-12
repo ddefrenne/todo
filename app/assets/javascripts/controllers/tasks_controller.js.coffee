@@ -9,5 +9,9 @@ Todo.TasksController = Ember.ArrayController.extend({
 
       task.save()
       @set('newDescription', '')
-  }
+  },
+
+  remaining: (->
+    return @filterBy('completed', false).get('length')
+  ).property('@each.completed')
 })
