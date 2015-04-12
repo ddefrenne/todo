@@ -1,18 +1,17 @@
 Todo.TaskController = Ember.ObjectController.extend({
   actions: {
     removeTask: () ->
-      todo = @get('model')
-      todo.deleteRecord()
-      todo.save()
+      task = @get('model')
+      task.deleteRecord()
+      task.save()
 
     completeTask: ->
-      todo = @get('model')
-      todo.set('completed', true)
-      todo.save()
+      task = @get('model')
+      task.set('completed', true)
+      task.save()
   },
 
   isCompleted: (->
-    task = @get('model');
-    return task.get('completed')
+    return @get('model').get('completed')
   ).property('model.completed')
 })
