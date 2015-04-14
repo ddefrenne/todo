@@ -1,4 +1,4 @@
-Todo.TaskController = Ember.ObjectController.extend({
+Todo.TaskController = Ember.Controller.extend({
   actions: {
     removeTask: () ->
       task = @get('model')
