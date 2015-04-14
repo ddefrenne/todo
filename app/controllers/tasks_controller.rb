@@ -36,7 +36,7 @@ class TasksController < ActionController::Base
   private
 
     def task_params
-      params.require(:task).permit(:description, :completed)
+      params.require(:task).permit(:description, :completed, :project_id)
     end
 
     def filter_tasks_by_params
