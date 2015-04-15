@@ -19,12 +19,14 @@
                         {{action "removeTask"}}>
                         <i class="fa fa-trash-o fa-lg"></i>
                 </button>
-                <button class="btn btn-success btn-xs"
-                        type="button"
-                        id="complete-task"
-                        {{action "completeTask"}}>
-                        <i class="fa fa-check fa-xs"></i>
-                </button>
+                {{#unless task.isCompleted}}
+                  <button class="btn btn-success btn-xs"
+                          type="button"
+                          id="complete-task"
+                          {{action "completeTask"}}>
+                          <i class="fa fa-check fa-xs"></i>
+                  </button>
+                {{/unless}}
               </div>
             </div>
           </div>
