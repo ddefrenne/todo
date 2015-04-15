@@ -7,4 +7,9 @@ Todo.TasksController = Ember.ArrayController.extend({
     remaining = @get('remaining')
     if remaining == 1 then 'task' else 'tasks'
   ).property('remaining')
+
+  allDone: (->
+    remaining = @get('remaining')
+    if remaining == 0 then true else false
+  ).property('remaining')
 })
