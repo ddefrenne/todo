@@ -23,6 +23,40 @@ RSpec.describe ProjectsController, :type => :controller do
     end
   end
 
+  describe "#create" do
+    context "on success" do
+      before(:example) {
+        post :create, { project: { name: 'test' }}
+      }
+
+      it "returns the created project" do
+        expect(response.body).to eql(
+          ProjectSerializer.new(Project.last).to_json
+        )
+      end
+
+      it "returns a 201" do
+        expect(response.status).to eql(201)
+      end
+    end
+
+    context "on failure" do
+      before(:example) {
+        post :create, { project: { name: '' }}
+      }
+
+      it "returns the errors" do
+        expect(response.body).to eql(
+          { errors: { name: ["can't be blank"] } }.to_json
+        )
+      end
+
+      it "returns a 422" do
+        expect(response.status).to eql(422)
+      end
+    end
+  end
+
   describe "#show" do
     before(:example) do
       project1
