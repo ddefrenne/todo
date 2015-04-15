@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def index
-    render json: Project.all, status: 200
+    render json: Project.all
   end
 
   def create
