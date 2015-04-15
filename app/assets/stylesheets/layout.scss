@@ -119,4 +119,10 @@ aside {
   .list-group-item {
     margin-bottom: 5px;
   }
+
+  a {
+    &:link, &:visited, &:hover, &:active {
+      text-decoration: none;
+    }
+  }
 }
