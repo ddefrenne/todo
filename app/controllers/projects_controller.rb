@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
     project = Project.new(project_params)
 
     if project.save
-      render json: project
+      render json: project, status: 201
     else
       render json: { errors: project.errors }, status: 422
     end
