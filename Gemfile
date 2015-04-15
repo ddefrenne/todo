@@ -32,6 +32,7 @@ gem 'spring',        group: :development
 
 group :development do
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 gem "ember-rails", "~> 0.15"
