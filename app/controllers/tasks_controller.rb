@@ -22,7 +22,7 @@ class TasksController < ActionController::Base
     if task.update(task_params)
       render json: task, status: 200
     else
-      render json: task.errors, status: 422
+      render json: { errors: task.errors }, status: 422
     end
   end
 
