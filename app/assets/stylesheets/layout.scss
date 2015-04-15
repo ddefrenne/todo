@@ -23,7 +23,7 @@ nav {
       line-height: normal;
       margin-right: 15px;
 
-      &:active, &:visited, &:hover {
+      &:link, &:visited, &:hover, &:active {
         color: white;
       }
     }
