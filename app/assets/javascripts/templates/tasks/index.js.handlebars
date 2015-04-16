@@ -5,7 +5,7 @@
 
   <div class="panel-body">
     <ul id="tasks-list" class="list-group">
-      {{#each task in model itemController='task'}}
+      {{#each task in model}}
         <li {{ bind-attr class=":list-group-item task.isCompleted:completed" }}>
           <div class="row">
             {{#link-to "tasks.show" task}}
