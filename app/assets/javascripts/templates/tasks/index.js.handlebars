@@ -8,9 +8,11 @@
       {{#each task in model itemController='task'}}
         <li {{ bind-attr class=":list-group-item task.isCompleted:completed" }}>
           <div class="row">
-            <div class="task-description col-md-10 col-sm-10 col-xs-10">
-              <span>{{task.description}}</span>
-            </div>
+            {{#link-to "tasks.show" task}}
+              <div class="task-description col-md-10 col-sm-10 col-xs-10">
+                <span>{{task.description}}</span>
+              </div>
+            {{/link-to}}
             <div class="task-actions col-md-2 col-sm-2 col-xs-2">
               <div class="pull-right">
                 <button class="btn btn-danger btn-xs"

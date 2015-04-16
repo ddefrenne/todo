@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root :to => 'assets#index'
   get 'assets/index'
 
-  resources :tasks, only: [:index, :create, :destroy, :update]
+  resources :tasks, only: [:index, :create, :show, :destroy, :update]
 
   resources :projects, only: [:index, :create, :show]
 

@@ -23,6 +23,15 @@ Todo.TasksIndexRoute = Ember.Route.extend({
     @store.find('task')
 })
 
+Todo.TasksShowRoute = Ember.Route.extend({
+  model: (params) ->
+    @store.find('task', params.task_id).then((task) ->
+      task.get('project').then( (project) ->
+        task.set('project', project)
+      )
+    )
+})
+
 Todo.ProjectsIndexRoute = Ember.Route.extend({
   model: ->
     @store.find('project')
