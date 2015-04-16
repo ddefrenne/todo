@@ -1,4 +1,4 @@
-Todo.TasksController = Ember.ArrayController.extend({
+Todo.TasksIndexController = Ember.ArrayController.extend({
   remaining: (->
     return @filterBy('completed', false).get('length')
   ).property('@each.completed'),

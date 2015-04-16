@@ -1,5 +1,3 @@
 class TaskSerializer < ApplicationSerializer
-  attributes :id
-  attributes :description
-  attributes :completed
+  attributes :id, :description, :completed, :project_id
 end

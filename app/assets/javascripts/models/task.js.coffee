@@ -1,4 +1,4 @@
 Todo.Task = DS.Model.extend
     description: DS.attr('string'),
     completed: DS.attr('boolean', { defaultValue: false }),
-    project: DS.belongsTo('project')
+    project: DS.belongsTo('project', { async: true })
