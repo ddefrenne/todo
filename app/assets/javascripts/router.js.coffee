@@ -6,6 +6,18 @@ Todo.Router.map ()->
     @route('show', { path: '/:project_id' })
   )
 
+Todo.IndexRoute = Ember.Route.extend({
+  model: ->
+    @store.find('task')
+
+  setupController: (controller, model) ->
+    @_super(controller, model)
+    @controllerFor('tasksIndex').set('model', model)
+
+  renderTemplate: ->
+    @render('tasks/index')
+})
+
 Todo.TasksIndexRoute = Ember.Route.extend({
   model: ->
     return @store.find('task')
