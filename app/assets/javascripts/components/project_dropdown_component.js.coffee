@@ -6,7 +6,17 @@ Todo.ProjectDropdownComponent = Ember.Component.extend({
       )
   ).on("init")
 
+  currentProject: ( ->
+    @get('currentTask.project')
+  ).property()
+
   allProjects: (->
     []
   ).property()
+
+  currentProjectDidChange: ( ->
+    task = @get('currentTask')
+    task.set('project', @get('currentProject'))
+    task.save()
+  ).observes('currentProject')
 })
