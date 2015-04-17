@@ -1,4 +1,4 @@
-$lightblue: #BBD8F2;
+$lightblue: #D2E6F8;
 $darkblue: #8FA4BF;
 $lightbrown: #D9C0A3;
 $middlebrown: #BFA58E;
@@ -89,11 +89,14 @@ aside {
   li {
     list-style: none;
     line-height: 1.8em;
-    color: $text-darkblue;
 
     &.list-group-item {
       padding-top: 5px;
       padding-bottom: 5px;
+    }
+
+    a:link, a:visited, a:hover, a:active  {
+      color: black;
     }
 
     &:nth-child(odd) {
