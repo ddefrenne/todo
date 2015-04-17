@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-  <div {{ bind-attr class="allDone:bg-success :panel-heading" }}>
+  <div class="{{ if allDone 'bg-success' }} panel-heading">
     <span id="tasks-remaining">{{remaining}} {{inflection}} remaining.</span>
   </div>
 
