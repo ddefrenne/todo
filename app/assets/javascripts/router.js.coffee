@@ -8,7 +8,7 @@ Todo.Router.map ()->
 
 Todo.IndexRoute = Ember.Route.extend({
   model: ->
-    @store.find('task')
+    @store.find('task', { completed: false })
 
   setupController: (controller, model) ->
     @_super(controller, model)
@@ -20,7 +20,7 @@ Todo.IndexRoute = Ember.Route.extend({
 
 Todo.TasksIndexRoute = Ember.Route.extend({
   model: ->
-    @store.find('task')
+    @store.find('task', { completed: false })
 })
 
 Todo.TasksShowRoute = Ember.Route.extend({
